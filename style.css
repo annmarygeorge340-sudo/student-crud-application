@@ -1,0 +1,19 @@
+  body {
+            background-color: #f4f7fc;
+        }
+
+        .navbar {
+            background-color: #8ba9e5;
+        }
+
+        .custom-card {
+            background: white;
+            border: 1px solid #dee5ef;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .page-title {
+            color: #1e3152;
+        }

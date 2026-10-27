@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - CRUD</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+          <!-- font aswome cdn -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-dark px-4 py-3">
+        <span class="navbar-brand text-dark fw-bold"><i class="fa-solid fa-user-graduate fa-xl" style="color: rgb(242, 212, 101);"></i> StudentCRUD</span>
+        
+    </nav>
+
+    <div class="container-fluid p-4">
+
+        <h1 class="page-title text-primary text-center">Student Management System</h1>
+        <p class="text-secondary text-center">Manage student records easily</p>
+
+        <!-- Add Student Form -->
+        <div class="custom-card">
+            <h4 class="mb-4">Add New Student</h4>
+
+            <form id="userform">
+                <input type="hidden" id="studentsedit">
+
+                <div class="row g-3 align-items-end">
+
+                    <div class="col-md-3">
+                        <label class="form-label fw-medium" for="studentid">Student ID</label>
+                        <input type="text" id="studentid"
+                               placeholder="Enter student ID"
+                               class="form-control" >
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label fw-medium" for="studentname">Name</label>
+                        <input type="text" id="studentname"
+                               placeholder="Enter student name"
+                               class="form-control" >
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label fw-medium" for="studentcourse">Course</label>
+                        <input type="text" id="studentcourse"
+                               placeholder="Enter course"
+                               class="form-control" >
+                    </div>
+
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-success w-100">
+                            Add Student
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <!-- Student Table -->
+        <div class="custom-card">
+            <h4 class="mb-4">Student List</h4>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover align-middle">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>#</th>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Course</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studenttable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
